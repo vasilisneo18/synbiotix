@@ -12,7 +12,6 @@
 		EB9AA1232AE30C8400D6DBD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB9AA1222AE30C8400D6DBD8 /* Assets.xcassets */; };
 		EB9AA1312AE30C8400D6DBD8 /* synbiotixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9AA1302AE30C8400D6DBD8 /* synbiotixTests.swift */; };
 		EB9AA13B2AE30C8400D6DBD8 /* synbiotixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9AA13A2AE30C8400D6DBD8 /* synbiotixUITests.swift */; };
-		EB9AA13D2AE30C8400D6DBD8 /* synbiotixUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9AA13C2AE30C8400D6DBD8 /* synbiotixUITestsLaunchTests.swift */; };
 		EB9AA14B2AE3BF9500D6DBD8 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9AA14A2AE3BF9500D6DBD8 /* Coordinator.swift */; };
 		EB9AA14D2AE3BFD000D6DBD8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9AA14C2AE3BFD000D6DBD8 /* Constants.swift */; };
 		EB9AA14F2AE3C09500D6DBD8 /* MasterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9AA14E2AE3C09500D6DBD8 /* MasterCoordinator.swift */; };
@@ -60,7 +59,6 @@
 		EB9AA1302AE30C8400D6DBD8 /* synbiotixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = synbiotixTests.swift; sourceTree = "<group>"; };
 		EB9AA1362AE30C8400D6DBD8 /* synbiotixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = synbiotixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB9AA13A2AE30C8400D6DBD8 /* synbiotixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = synbiotixUITests.swift; sourceTree = "<group>"; };
-		EB9AA13C2AE30C8400D6DBD8 /* synbiotixUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = synbiotixUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EB9AA14A2AE3BF9500D6DBD8 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		EB9AA14C2AE3BFD000D6DBD8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EB9AA14E2AE3C09500D6DBD8 /* MasterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterCoordinator.swift; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				EB9AA13A2AE30C8400D6DBD8 /* synbiotixUITests.swift */,
-				EB9AA13C2AE30C8400D6DBD8 /* synbiotixUITestsLaunchTests.swift */,
 			);
 			path = synbiotixUITests;
 			sourceTree = "<group>";
@@ -420,7 +417,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB9AA13D2AE30C8400D6DBD8 /* synbiotixUITestsLaunchTests.swift in Sources */,
 				EB9AA13B2AE30C8400D6DBD8 /* synbiotixUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,7 +21,7 @@ struct MenuView: View {
                 
                 VStack(alignment: .leading) {
                     
-                    Text("Select frosting")
+                    Text("Choose Frosting")
                         .padding(.top, 20)
                     
                     LazyVStack(spacing: 10) {
@@ -32,10 +32,11 @@ struct MenuView: View {
                                             isSelected: $menuVM.frostingsSelection[index]) {
                                 menuVM.frostingSelected(index: index)
                             }
+//                            .accessibilityIdentifier(ScreenIdentifier.MenuView.frostingOptionView.rawValue)
                         }
                     }
                     
-                    Text("Select filling (Optional)")
+                    Text("Fillings (Optional)")
                         .padding(.top, 20)
                     
                     LazyVStack(spacing: 10) {
@@ -47,6 +48,7 @@ struct MenuView: View {
                                             optional: true) {
                                 menuVM.fillingSelected(index: index)
                             }
+//                            .accessibilityIdentifier(ScreenIdentifier.MenuView.fillingOptionView.rawValue)
                         }
                     }
                     
@@ -56,7 +58,7 @@ struct MenuView: View {
                 
                 
             }
-            .navigationTitle("Donut menu")
+            .navigationTitle("Make Your Donut ")
             .overlay(alignment: .bottom) {
                 DonutButton(title: "Finish Ordering",
                             color: menuVM.isOrderEnabled ? .blue : .cyan,
@@ -68,6 +70,7 @@ struct MenuView: View {
                 .padding(.horizontal, 20)
                 .padding(.bottom, 20)
                 .disabled(!menuVM.isOrderEnabled)
+//                .accessibilityIdentifier(ScreenIdentifier.MenuView.finishOrderButton.rawValue)
             }
         }
     }

@@ -18,18 +18,16 @@ struct DonutOptionItem: View {
     var body: some View {
         
             HStack {
-                VStack {
-                    Text(item)
-                        .font(.system(size: 14))
-                        .foregroundColor(.gray)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    
-                    Text(itemPrice)
-                        .font(.system(size: 14))
-                        .foregroundColor(.gray)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    
-                }
+                
+                Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
+                    .foregroundStyle(Color.blue)
+                
+                Text(item)
+                    .font(.system(size: 14))
+                    .foregroundColor(.gray)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                
+                Spacer()
                 
                 if optional && isSelected {
                     Text("Tap to remove")
@@ -37,8 +35,9 @@ struct DonutOptionItem: View {
                         .foregroundStyle(Color.cyan)
                 }
                 
-                Image(systemName: isSelected ? "circle.inset.filled" : "circle")
-                    .foregroundStyle(Color.blue)
+                Text(itemPrice)
+                    .font(.system(size: 14))
+                    .foregroundColor(.gray)
     
             }
         
@@ -57,7 +56,11 @@ struct DonutOptionItem: View {
     
     var itemPrice: String {
         get {
-            return price.formattedByCurrency("EUR")
+            if optional {
+                return "+ \(price.formattedByCurrency("EUR"))"
+            } else {
+                return price.formattedByCurrency("EUR")
+            }
         }
     }
     

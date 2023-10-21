@@ -10,27 +10,70 @@ import XCTest
 
 final class synbiotixTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    private var menuSut: MenuVM!
+    private var receiptSut: ReceiptVM!
+    private var frosting: Frosting!
+    private var filling: Filling?
+    
+    override func setUp() {
+        menuSut = .init()
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    override func tearDown() {
+        super.tearDown()
+        menuSut = nil
+        receiptSut = nil
+        frosting = nil
+        filling = nil
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func testDisabledOrderButton() {
+        menuSut.selectedFrosting = nil
+        XCTAssertEqual(menuSut.isOrderEnabled, false)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testEnabledOrderButton() {
+        frosting = .init(name: " Chocolate", price: 1.75)
+        menuSut.selectedFrosting = frosting
+        XCTAssertEqual(menuSut.isOrderEnabled, true)
     }
-
+    
+    func testResultWithStrawbberyOnly() {
+        frosting = .init(name: "Strawbbery", price: 2)
+        receiptSut = .init(with: frosting, and: filling)
+        XCTAssertEqual(receiptSut.totalPrice, "Total price: €2.00")
+    }
+    
+    func testResultWithSaltedCaramelOnly() {
+        frosting = .init(name: "Salted Caramel", price: 2.5)
+        receiptSut = .init(with: frosting, and: filling)
+        XCTAssertEqual(receiptSut.totalPrice, "Total price: €2.50")
+    }
+    
+    func testResultWithCinammonSugarOnly() {
+        frosting = .init(name: "Cinnamon Sugar", price: 3.1)
+        receiptSut = .init(with: frosting, and: filling)
+        XCTAssertEqual(receiptSut.totalPrice, "Total price: €3.10")
+    }
+    
+    func testResultWithChocolateOnly() {
+        frosting = .init(name: " Chocolate", price: 1.75)
+        receiptSut = .init(with: frosting, and: filling)
+        XCTAssertEqual(receiptSut.totalPrice, "Total price: €1.75")
+    }
+    
+    func testResultWithChocolateAndVanilla() {
+        frosting = .init(name: " Chocolate", price: 1.75)
+        filling = .init(name: "Vanilla", price: 1.5)
+        receiptSut = .init(with: frosting, and: filling)
+        XCTAssertEqual(receiptSut.totalPrice, "Total price: €3.25")
+    }
+    
+    func testResultWithCinnamonSugarAndVanilla() {
+        frosting = .init(name: " Cinnamon Sugar", price: 3.1)
+        filling = .init(name: "Vanilla", price: 1.5)
+        receiptSut = .init(with: frosting, and: filling)
+        XCTAssertEqual(receiptSut.totalPrice, "Total price: €4.60")
+    }
+    
 }
