@@ -15,6 +15,10 @@ final class synbiotixUITests: XCTestCase {
         MenuScreen(app: app)
     }
     
+    private var receiptScreen: ReceiptScreen {
+        ReceiptScreen(app: app)
+    }
+    
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
@@ -45,6 +49,40 @@ final class synbiotixUITests: XCTestCase {
         XCTAssertEqual(listItems.count, 4, "There should be 4 filling items on the screen")
     }
     
+    func test_strawbbery_frosting_selection_total_price() {
+        XCTAssertFalse(menuScreen.finishOrderButton.isEnabled, "Button should be disabled")
+        menuScreen.strawbberyFrostingOptionsView.tap()
+        XCTAssertTrue(menuScreen.finishOrderButton.isEnabled, "Button should be enabled")
+        menuScreen.finishOrderButton.tap()
+        XCTAssertEqual(receiptScreen.totalPriceLabel.label, "Total price: €2.00")
+    }
     
+    func test_strawbbery_frosting_with_chocolate_filling_selection_total_price() {
+        XCTAssertFalse(menuScreen.finishOrderButton.isEnabled, "Button should be disabled")
+        menuScreen.strawbberyFrostingOptionsView.tap()
+        XCTAssertTrue(menuScreen.finishOrderButton.isEnabled, "Button should be enabled")
+        menuScreen.chocolateFillingOptionsView.tap()
+        menuScreen.finishOrderButton.tap()
+        XCTAssertEqual(receiptScreen.totalPriceLabel.label, "Total price: €3.50")
+    }
+    
+    func test_strawbbery_frosting_with_chocolate_filling_selection_order_summary() {
+        menuScreen.chocolateFillingOptionsView.tap()
+        XCTAssertFalse(menuScreen.finishOrderButton.isEnabled, "Button should be disabled")
+        menuScreen.strawbberyFrostingOptionsView.tap()
+        XCTAssertTrue(menuScreen.finishOrderButton.isEnabled, "Button should be enabled")
+        menuScreen.finishOrderButton.tap()
+        XCTAssertEqual(receiptScreen.orderSummaryLabel.label, "Strawbbery donut\nwith Chocolate filling")
+    }
+    
+    func test_order_again_resets_values() {
+        menuScreen.chocolateFillingOptionsView.tap()
+        menuScreen.strawbberyFrostingOptionsView.tap()
+        XCTAssertTrue(menuScreen.finishOrderButton.isEnabled, "Button should be enabled")
+        menuScreen.finishOrderButton.tap()
+        XCTAssertEqual(receiptScreen.orderSummaryLabel.label, "Strawbbery donut\nwith Chocolate filling")
+        receiptScreen.orderAgainButton.tap()
+        XCTAssertFalse(menuScreen.finishOrderButton.isEnabled, "Button should be disabled")
+    }
     
 }

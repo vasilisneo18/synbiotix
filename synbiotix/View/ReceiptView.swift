@@ -46,12 +46,12 @@ struct ReceiptView: View {
             Text(receiptVm.order)
                 .multilineTextAlignment(.center)
                 .padding(.top, 10)
-//                .accessibilityIdentifier(ScreenIdentifier.ReceiptView.orderSummaryLabel.rawValue)
+                .accessibilityIdentifier(ScreenIdentifier.ReceiptView.orderSummaryLabel.rawValue)
             
             Text(receiptVm.totalPrice)
                 .font(.system(size: 22, weight: .semibold))
                 .padding(.top, 10)
-//                .accessibilityIdentifier(ScreenIdentifier.ReceiptView.totalPriceLabel.rawValue)
+                .accessibilityIdentifier(ScreenIdentifier.ReceiptView.totalPriceLabel.rawValue)
             Spacer()
             
             DonutButton(title: "Order again",
@@ -62,7 +62,7 @@ struct ReceiptView: View {
             }
             .padding(.horizontal, 20)
             .padding(.bottom, 20)
-//            .accessibilityIdentifier(ScreenIdentifier.ReceiptView.orderAgainButton.rawValue)
+            .accessibilityIdentifier(ScreenIdentifier.ReceiptView.orderAgainButton.rawValue)
             
         }
     }

@@ -10,6 +10,7 @@
 		EB802B912AE4E52000F953A1 /* ScreenIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB802B902AE4E52000F953A1 /* ScreenIdentifier.swift */; };
 		EB802B922AE4E52000F953A1 /* ScreenIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB802B902AE4E52000F953A1 /* ScreenIdentifier.swift */; };
 		EB802B952AE4E74C00F953A1 /* MenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB802B932AE4E74C00F953A1 /* MenuScreen.swift */; };
+		EB802B982AE50C6900F953A1 /* ReceiptScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB802B962AE50C6900F953A1 /* ReceiptScreen.swift */; };
 		EB9AA11A2AE30C8200D6DBD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9AA1192AE30C8200D6DBD8 /* AppDelegate.swift */; };
 		EB9AA11C2AE30C8200D6DBD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9AA11B2AE30C8200D6DBD8 /* SceneDelegate.swift */; };
 		EB9AA1232AE30C8400D6DBD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB9AA1222AE30C8400D6DBD8 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 /* Begin PBXFileReference section */
 		EB802B902AE4E52000F953A1 /* ScreenIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenIdentifier.swift; sourceTree = "<group>"; };
 		EB802B932AE4E74C00F953A1 /* MenuScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreen.swift; sourceTree = "<group>"; };
+		EB802B962AE50C6900F953A1 /* ReceiptScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptScreen.swift; sourceTree = "<group>"; };
 		EB9AA1162AE30C8200D6DBD8 /* synbiotix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = synbiotix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB9AA1192AE30C8200D6DBD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB9AA11B2AE30C8200D6DBD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB802B992AE50D5800F953A1 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				EB802B932AE4E74C00F953A1 /* MenuScreen.swift */,
+				EB802B962AE50C6900F953A1 /* ReceiptScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
 		EB9AA10D2AE30C8200D6DBD8 = {
 			isa = PBXGroup;
 			children = (
@@ -158,8 +169,8 @@
 		EB9AA1392AE30C8400D6DBD8 /* synbiotixUITests */ = {
 			isa = PBXGroup;
 			children = (
+				EB802B992AE50D5800F953A1 /* Screens */,
 				EB9AA13A2AE30C8400D6DBD8 /* synbiotixUITests.swift */,
-				EB802B932AE4E74C00F953A1 /* MenuScreen.swift */,
 			);
 			path = synbiotixUITests;
 			sourceTree = "<group>";
@@ -427,6 +438,7 @@
 			files = (
 				EB802B952AE4E74C00F953A1 /* MenuScreen.swift in Sources */,
 				EB9AA13B2AE30C8400D6DBD8 /* synbiotixUITests.swift in Sources */,
+				EB802B982AE50C6900F953A1 /* ReceiptScreen.swift in Sources */,
 				EB802B922AE4E52000F953A1 /* ScreenIdentifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

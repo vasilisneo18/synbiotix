@@ -23,6 +23,9 @@ class MenuScreen {
        app.otherElements[ScreenIdentifier.MenuView.frostingOptionsView.rawValue]
     }
     
+    var strawbberyFrostingOptionsView: XCUIElement {
+        app.otherElements["\(ScreenIdentifier.MenuView.frostingOptionViewItem.rawValue)_0"]
+    }
     var fillingOptionViewItem: XCUIElement {
        app.otherElements[ScreenIdentifier.MenuView.fillingOptionViewItem.rawValue]
     }
@@ -33,6 +36,10 @@ class MenuScreen {
     
     var finishOrderButton: XCUIElement {
        app.buttons[ScreenIdentifier.MenuView.finishOrderButton.rawValue]
+    }
+    
+    var chocolateFillingOptionsView: XCUIElement {
+        app.otherElements["\(ScreenIdentifier.MenuView.fillingOptionViewItem.rawValue)_1"]
     }
     
 }

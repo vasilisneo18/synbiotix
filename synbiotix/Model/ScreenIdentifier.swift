@@ -17,4 +17,10 @@ enum ScreenIdentifier {
         case finishOrderButton
     }
     
+    enum ReceiptView: String {
+        case orderSummaryLabel
+        case totalPriceLabel
+        case orderAgainButton
+    }
+
 }
