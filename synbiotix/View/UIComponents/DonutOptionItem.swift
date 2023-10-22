@@ -17,17 +17,20 @@ struct DonutOptionItem: View {
     
     var body: some View {
         
+        LazyVStack {
             HStack {
-                
-                Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
-                    .foregroundStyle(Color.blue)
-                
-                Text(item)
-                    .font(.system(size: 14))
-                    .foregroundColor(.gray)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-                Spacer()
+                VStack {
+                    Text(item)
+                        .font(.system(size: 14))
+                        .foregroundColor(.gray)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    Text(itemPrice)
+                        .font(.system(size: 14))
+                        .foregroundColor(.gray)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                }
                 
                 if optional && isSelected {
                     Text("Tap to remove")
@@ -35,20 +38,19 @@ struct DonutOptionItem: View {
                         .foregroundStyle(Color.cyan)
                 }
                 
-                Text(itemPrice)
-                    .font(.system(size: 14))
-                    .foregroundColor(.gray)
-    
+                Image(systemName: isSelected ? "circle.inset.filled" : "circle")
+                    .foregroundStyle(Color.blue)
+                
             }
-        
-        .padding(.horizontal, 20)
-        .frame(height: 50)
-        .background(
-            RoundedRectangle(cornerRadius: 12, style: .continuous)
-                .stroke(lineWidth: 2)
-                .foregroundColor(.gray)
-        )
-        .background(.white)
+            .padding(.horizontal, 20)
+            .frame(height: 50)
+            .background(
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                    .stroke(lineWidth: 2)
+                    .foregroundColor(.gray)
+            )
+            .background(.white)
+        }
         .onTapGesture {
             action()
         }
@@ -56,11 +58,7 @@ struct DonutOptionItem: View {
     
     var itemPrice: String {
         get {
-            if optional {
-                return "+ \(price.formattedByCurrency("EUR"))"
-            } else {
-                return price.formattedByCurrency("EUR")
-            }
+            return price.formattedByCurrency("EUR")
         }
     }
     

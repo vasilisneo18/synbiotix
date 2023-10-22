@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB802B912AE4E52000F953A1 /* ScreenIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB802B902AE4E52000F953A1 /* ScreenIdentifier.swift */; };
+		EB802B922AE4E52000F953A1 /* ScreenIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB802B902AE4E52000F953A1 /* ScreenIdentifier.swift */; };
+		EB802B952AE4E74C00F953A1 /* MenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB802B932AE4E74C00F953A1 /* MenuScreen.swift */; };
 		EB9AA11A2AE30C8200D6DBD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9AA1192AE30C8200D6DBD8 /* AppDelegate.swift */; };
 		EB9AA11C2AE30C8200D6DBD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9AA11B2AE30C8200D6DBD8 /* SceneDelegate.swift */; };
 		EB9AA1232AE30C8400D6DBD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB9AA1222AE30C8400D6DBD8 /* Assets.xcassets */; };
@@ -50,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB802B902AE4E52000F953A1 /* ScreenIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenIdentifier.swift; sourceTree = "<group>"; };
+		EB802B932AE4E74C00F953A1 /* MenuScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreen.swift; sourceTree = "<group>"; };
 		EB9AA1162AE30C8200D6DBD8 /* synbiotix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = synbiotix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB9AA1192AE30C8200D6DBD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB9AA11B2AE30C8200D6DBD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				EB9AA13A2AE30C8400D6DBD8 /* synbiotixUITests.swift */,
+				EB802B932AE4E74C00F953A1 /* MenuScreen.swift */,
 			);
 			path = synbiotixUITests;
 			sourceTree = "<group>";
@@ -200,6 +206,7 @@
 			children = (
 				EB9AA1612AE3DFD000D6DBD8 /* Frosting.swift */,
 				EB9AA1632AE3DFE400D6DBD8 /* Filling.swift */,
+				EB802B902AE4E52000F953A1 /* ScreenIdentifier.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -388,6 +395,7 @@
 				EB9AA16F2AE3F2FB00D6DBD8 /* DonutOptionItem.swift in Sources */,
 				EB9AA15B2AE3D5DD00D6DBD8 /* APIRouter.swift in Sources */,
 				EB9AA1722AE3F67900D6DBD8 /* Double+Extension.swift in Sources */,
+				EB802B912AE4E52000F953A1 /* ScreenIdentifier.swift in Sources */,
 				EB9AA1552AE3C26A00D6DBD8 /* MenuView.swift in Sources */,
 				EB9AA1782AE41B9A00D6DBD8 /* AlertHelper.swift in Sources */,
 				EB9AA14B2AE3BF9500D6DBD8 /* Coordinator.swift in Sources */,
@@ -417,7 +425,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB802B952AE4E74C00F953A1 /* MenuScreen.swift in Sources */,
 				EB9AA13B2AE30C8400D6DBD8 /* synbiotixUITests.swift in Sources */,
+				EB802B922AE4E52000F953A1 /* ScreenIdentifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

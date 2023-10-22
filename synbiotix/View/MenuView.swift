@@ -32,9 +32,10 @@ struct MenuView: View {
                                             isSelected: $menuVM.frostingsSelection[index]) {
                                 menuVM.frostingSelected(index: index)
                             }
-//                            .accessibilityIdentifier(ScreenIdentifier.MenuView.frostingOptionView.rawValue)
+                            .accessibilityIdentifier("\(ScreenIdentifier.MenuView.frostingOptionViewItem.rawValue)_\(index)")
                         }
                     }
+                    .accessibilityIdentifier(ScreenIdentifier.MenuView.frostingOptionsView.rawValue)
                     
                     Text("Fillings (Optional)")
                         .padding(.top, 20)
@@ -48,9 +49,10 @@ struct MenuView: View {
                                             optional: true) {
                                 menuVM.fillingSelected(index: index)
                             }
-//                            .accessibilityIdentifier(ScreenIdentifier.MenuView.fillingOptionView.rawValue)
+                            .accessibilityIdentifier("\(ScreenIdentifier.MenuView.fillingOptionViewItem.rawValue)_\(index)")
                         }
                     }
+                    .accessibilityIdentifier(ScreenIdentifier.MenuView.fillingOptionsView.rawValue)
                     
                 }
                 .padding(.horizontal, 20)
@@ -70,7 +72,7 @@ struct MenuView: View {
                 .padding(.horizontal, 20)
                 .padding(.bottom, 20)
                 .disabled(!menuVM.isOrderEnabled)
-//                .accessibilityIdentifier(ScreenIdentifier.MenuView.finishOrderButton.rawValue)
+                .accessibilityIdentifier(ScreenIdentifier.MenuView.finishOrderButton.rawValue)
             }
         }
     }
